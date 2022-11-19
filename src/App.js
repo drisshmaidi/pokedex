@@ -8,9 +8,7 @@ const App = () => {
   function logWhenClicked() {
     console.log("Test");
   }
-  function logWhenClicked() {
-    console.log("Test");
-  }
+
   return (
     <div>
       <Logo appName="Driss's Pokedex" handleClick={logWhenClicked} />

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-
+import allPokemon from "json-pokemon";
 
 const CaughtPokemon = (props) => {
 let [caught, setCaught] = useState([]);
 
 function catchPokemon() {
-  setCaught(caught.concat("Charmander"));
+  let index = Math.floor(Math.random() * allPokemon.length);
+  setCaught(caught.concat(allPokemon[index].name));
 }
 
 return (
@@ -15,7 +16,7 @@ return (
 
     <ul>
       {caught.map((item) => {
-        return <li>{item}</li>;
+        return<li>{item}</li>;
       })}
     </ul>
   </div>
@@ -24,3 +25,4 @@ return (
 
 
 export default CaughtPokemon;
+
