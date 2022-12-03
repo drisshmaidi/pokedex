@@ -12,11 +12,13 @@ function PokemonMoves() {
   }, []);
 
   if (pokemonData) {
+    let allMoves = pokemonData.moves.slice(0, 4);
     return (
       <div>
         <p>{pokemonData.name}'s Moves:</p>
         <ul>
-          {pokemonData.moves.map((move, index) => {
+          {
+          allMoves.map((move, index) => {
             return <li key={index}>{move.move.name}</li>;
           })}
         </ul>
